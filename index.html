@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Crisis: Scott vs. The Bugs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Code Crisis: Scott vs. The Bugs</h1>
 
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="leaderboard">
+        <h3>⭐ Top Debuggers ⭐</h3>
+        <ul id="scores"></ul>
+    </div>
+
+    <!-- Name Input Popup -->
+    <div id="namePopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter Your Debugger Name</h2>
+            <input type="text" id="playerNameInput" placeholder="Your Name">
+            <button class="popup-button" onclick="setPlayerName()">Next</button>
+        </div>
+    </div>
+
+    <!-- Instructions Popup -->
+    <div id="instructionPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Help Scott Debug the System!</h2>
+            <p>
+                🕹️ <strong>CONTROLS:</strong><br>
+                → Move Left: <strong>Left Arrow</strong> <br>
+                → Move Right: <strong>Right Arrow</strong> <br><br>
+                🐛 <strong>OBJECTIVE:</strong><br>
+                Catch bugs to keep the system stable!<br>
+                (3 System Stability Lives—don’t let too many bugs pass through or the system will crash!)<br><br>
+                🔧 <strong>Good luck, and happy debugging!</strong>
+            </p>
+            <button class="popup-button" onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Game Over Popup -->
+    <div id="gameOverPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>System Crash! Too Many Bugs!</h2>
+            <p>You fixed <strong><span id="finalScore"></span></strong> bugs!</p>
+            <p>Check the leaderboard to see how you rank!</p>
+            <div class="gameOver-buttons">
+                <button class="popup-button" onclick="closeGameOverPopup()">Close</button>
+                <button class="popup-button" onclick="location.reload()">🔄 Debug Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

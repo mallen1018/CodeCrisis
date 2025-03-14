@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #dde8f0; /* Light blue-gray */
+    color: #4a4a4a;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+canvas {
+    background-color: white;
+    border: 5px solid #7a9bb8; /* Muted blue */
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(122, 155, 184, 0.4);
+    width: 750px; /* ✅ Keep original width */
+    height: 500px; /* ✅ Ensure proportional display */
+}
+
+/* Leaderboard Styling */
+#leaderboard {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    margin: 15px auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+}
+
+h3 {
+    font-size: 22px;
+    color: #3b5b78; /* Deep blue */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    background: #c9dae8; /* Soft blue */
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    color: #2a3d52;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+li:hover {
+    background: #b0c6db;
+}
+
+/* Stylish Buttons */
+button {
+    font-family: 'Poppins', sans-serif;
+    background: #5a85a3; /* Solid deep blue */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    margin-top: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #3b5b78;
+    transform: scale(1.07);
+}
+
+/* Styled Popups */
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 25px;
+    width: 85%;
+    max-width: 420px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup h2 {
+    color: #3b5b78;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.popup p {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.popup input {
+    width: 85%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3b5b78;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+}
