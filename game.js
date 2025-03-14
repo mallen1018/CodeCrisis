@@ -40,10 +40,10 @@ function spawnBugs() {
                 x: Math.random() * (canvas.width - 100) + 50,  
                 y: -40, 
                 w: 35, h: 35,  
-                speed: 3.8  
+                speed: 3.9  
             });
         }
-    }, 850);
+    }, 780);
 }
 
 function updateGame() {
